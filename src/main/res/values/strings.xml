@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Code Generator</string>
+    <string name="title">Code Generator</string>
+    <string name="currency">Lines of Code:</string>
+    <string name="perSec">Lines per second:</string>
+    <string name="clicker_title">Clicker</string>
+    <string name="clicker_upgrades_title">Clicker Upgrades</string>
+    <string name="rate_upgrades_title">Rate Upgrades</string>
+    <string name="stats_title">Stats</string>
+    <string name="settings_title">Settings</string>
+    <string name="reset_button_text">RESET</string>
+    <string name="about_button_text">About</string>
+    <string name="info_button_text">Info.</string>
+    <string name="settings_text">Settings</string>
+    <string name="mute_label_text">Mute</string>
+    <string name="music_label_text">Music:</string>
+    <string name="volume_label_text">Volume:</string>
+    <string name="computer_label_text">Your Computer:</string>
+    <string name="your_current_stats">Your Current Stats</string>
+    <string name="green_shop_color">#72d10a</string>
+
+    <string-array name="music">
+        <item>Calm</item>
+        <item>Piano</item>
+        <item>Heavy</item>
+        <item>Jazz</item>
+    </string-array>
+
+    <string-array name="computer">
+        <item>Retro</item>
+        <item>Orange</item>
+        <item>Modern</item>
+    </string-array>
+
+</resources>

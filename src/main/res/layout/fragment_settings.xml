@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="#2D3756">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/reset_bottom_margin"
+            android:text="@string/reset_button_text"
+            android:background="@drawable/setting_button_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about" />
+
+        <Button
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/about_margin_bottom"
+            android:text="@string/about_button_text"
+            android:background="@drawable/setting_button_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/info"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/info_margin_bottom"
+            android:text="@string/info_button_text"
+            android:background="@drawable/setting_button_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/about" />
+
+        <TextView
+            android:id="@+id/settings_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/settings_head_color"
+            android:paddingStart="@dimen/settings_start_padding"
+            android:paddingTop="@dimen/settings_top_padding"
+            android:paddingBottom="@dimen/settings_bottom_padding"
+            android:text="@string/settings_text"
+            android:textSize="@dimen/settings_title_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <Spinner
+            android:id="@+id/music_spinner"
+            android:layout_width="@dimen/spinner_menu_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spinner_margin_start"
+            android:layout_marginBottom="@dimen/music_spinner_margin_bottom"
+            android:textColor="@android:color/black"
+            android:background="@drawable/spinner_style"
+            app:layout_constraintBottom_toTopOf="@+id/volume"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/music_tag" />
+
+        <Switch
+            android:id="@+id/mute_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginBottom="@dimen/switch_margin_bottom"
+            android:text="@string/mute_label_text"
+            android:shadowColor="#4E4B4B"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/computer_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volume_bar" />
+
+        <TextView
+            android:id="@+id/music_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/music_tag_margin_top"
+            android:layout_marginBottom="@dimen/music_tag_margin_bottom"
+            android:textColor="@android:color/black"
+            android:shadowColor="#605C5C"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:text="@string/music_label_text"
+            android:textSize="@dimen/tag_size"
+            app:layout_constraintBottom_toTopOf="@+id/music_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settings_title" />
+
+        <SeekBar
+            android:id="@+id/volume_bar"
+            android:layout_width="@dimen/spinner_menu_width"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:thumb="@drawable/custom_thumb"
+
+            android:layout_marginStart="@dimen/volume_start_margin"
+            android:layout_marginTop="@dimen/volume_margin"
+            android:layout_marginBottom="@dimen/volume_margin"
+            app:layout_constraintBottom_toTopOf="@+id/mute_switch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volume" />
+
+        <TextView
+            android:id="@+id/volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/volume_tag_top_margin"
+            android:textColor="@android:color/black"
+            android:shadowColor="#605C5C"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            android:text="@string/volume_label_text"
+            android:textSize="@dimen/tag_size"
+            app:layout_constraintBottom_toTopOf="@+id/volume_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/music_spinner" />
+
+        <TextView
+            android:id="@+id/computer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_margin"
+            android:layout_marginTop="@dimen/computer_tag_top_margin"
+            android:layout_marginBottom="@dimen/computer_bottom_margin"
+            android:text="@string/computer_label_text"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/tag_size"
+            android:shadowColor="#605C5C"
+            android:shadowDx="1"
+            android:shadowRadius="1"
+            app:layout_constraintBottom_toTopOf="@+id/computer_spinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mute_switch" />
+
+        <Spinner
+            android:id="@+id/computer_spinner"
+            android:layout_width="@dimen/spinner_menu_width"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="@dimen/spinner_margin_start"
+            android:layout_marginBottom="@dimen/comp_spinner_margin_bottom"
+            android:background="@drawable/spinner_style"
+            app:layout_constraintBottom_toTopOf="@+id/about"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/computer_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

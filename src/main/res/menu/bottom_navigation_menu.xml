@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/clicker"
+        android:icon="@drawable/home_icon"
+        android:title="@string/clicker_title"/>
+
+    <item android:id="@+id/clicker_upgrades"
+        android:icon="@drawable/pointer_upgrade_icon"
+        android:title="@string/clicker_upgrades_title"/>
+
+    <item android:id="@+id/rate_upgrades"
+        android:icon="@drawable/rate_upgrade_icon"
+        android:title="@string/rate_upgrades_title"/>
+
+    <item android:id="@+id/stats"
+        android:icon="@drawable/stats_icon"
+        android:title="@string/stats_title"/>
+
+    <item android:id="@+id/settings"
+        android:icon="@drawable/settings_icon"
+        android:title="@string/settings_title"/>
+
+</menu>
